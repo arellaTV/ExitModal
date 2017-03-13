@@ -5,7 +5,25 @@
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ouibounce/0.0.12/ouibounce.js" /></script>
   </head>
+  <style>
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <body>
-
+    <div id="modal">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non eleifend lacus.
+      In hac habitasse platea dictumst. Vestibulum semper dignissim massa, sed mattis leo mattis a.
+      Proin at ante neque. Phasellus ac euismod elit. Proin pharetra ut dui nec euismod. Duis a finibus nisi.
+      Nulla in pellentesque odio.
+    </div>
+    <script>
+      ouibounce(document.getElementById('modal'), { callback: function() { console.log('Ouibounce fired!'); } });
+    </script>
   </body>
 </html>
